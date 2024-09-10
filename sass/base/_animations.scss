@@ -1,0 +1,12 @@
+@keyframes growCircle {
+    0% {
+        
+        border: 4px solid #fff; /* Make circle hollow with a #fff border */
+        opacity: 1;
+    }
+    100% {
+       
+        border: 40px solid #fff; /* Make circle hollow with a #fff border */
+        opacity: 0;
+    }
+}

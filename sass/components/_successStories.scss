@@ -1,0 +1,135 @@
+/* Success Section */
+.success {
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f5f5f5;
+}
+
+.success span {
+  color: $color-red;
+}
+
+.success .info h2 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.success .info {
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success .info p {
+  width: 80%;
+  font-size: 18px;
+}
+
+.success .swiper {
+  display: flex;
+  padding: 6rem;
+  gap: 6rem;
+  text-align: left;
+  background-color: $color-white;
+}
+
+.success .swiper img {
+  width: 550px;
+  border-radius: 1rem;
+  transform: rotate(-2deg);
+}
+
+.success .swiper h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.success .swiper h3 {
+  font-weight: 500;
+}
+
+.success .swiper h2:hover {
+  cursor: pointer;
+}
+
+.success .swiper p {
+  font-size: 18px;
+  color: $color-dark-gray;
+}
+
+.success .swiper .col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.success .swiper .view {
+  border: 1px solid $color-red;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 12px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  color: $color-red;
+  width: 20%;
+  font-weight: 500;
+}
+
+.success .swiper .view:hover {
+  background-color: $color-red;
+  color: $color-white;
+}
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+  .success .swiper {
+    padding: 2rem;
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .success .swiper img {
+    width: 100%;
+
+    transform: rotate(0deg);
+  }
+
+  .success .swiper h2 {
+    font-size: 30px;
+  }
+
+  .success .swiper p {
+    font-size: 16px;
+  }
+
+  .success .swiper .view {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .success .swiper .view {
+    width: 40%;
+  }
+
+  .success .info h2 {
+
+    font-size: 22px;
+  }
+
+  .success .info p {
+    width: 100%;
+    font-size: 14px;
+  }
+  
+}
+

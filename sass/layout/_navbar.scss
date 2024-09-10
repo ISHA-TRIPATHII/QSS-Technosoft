@@ -1,0 +1,180 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: $color-nav-bg;;
+  color: $color-white;
+  position: fixed;
+  width: 100vw;
+  z-index: 30;
+
+  &__logo {
+    img {
+      height: 55px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    &-list {
+      display: flex;
+      gap: 2rem;
+      font-size: 16px;
+
+      &-item {
+        &-link {
+          color: $color-white;
+          font-weight: 400;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $color-red;
+          }
+        }
+      }
+    }
+  }
+
+  &__button--generative-ai {
+    background-color: $color-red;
+    color: $color-white;
+    padding: 16px 10px 16px 43px;
+    margin-left: 0.5rem;
+    border-radius: 2px;
+    font-weight: 600;
+    position: relative;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    &-static-circle {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 20px; /* Increase size for visibility */
+      height: 20px; /* Increase size for visibility */
+      border: 3px solid #fff; /* Make circle hollow with a red border */
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      margin-left: 0.5rem;
+    }
+
+    /* Animated growing circle */
+    &-animated-circle {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 24px; /* Start size same as static circle's outer edge */
+      height: 24px; /* Start size same as static circle's outer edge */
+      border: 2px solid #fff; /* Make circle hollow with a red border */
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: growCircle 2s infinite;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__menu {
+    &-toggle {
+      display: none; /* Initially hidden on larger screens */
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      margin-left: 1rem;
+      z-index: 50;
+      position: relative;
+      background: transparent; /* Ensure background is transparent */
+
+      &.open {
+        span:nth-child(1) {
+          position: absolute;
+          transform: rotate(
+            135deg
+          ); // First span rotates to form one diagonal line of the cross
+        }
+        span:nth-child(2) {
+          opacity: 0; // Second span disappears
+        }
+        span:nth-child(3) {
+          position: absolute;
+          transform: rotate(
+            -135deg
+          ); // Third span rotates to form the other diagonal line of the cross
+        }
+      }
+    }
+
+    &-bar {
+      width: 30px;
+      height: 3px;
+      background-color: $color-white;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+  }
+}
+
+// Sidebar styles
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -150%; /* Initially hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: $color-black;
+  z-index: 25;
+  padding: 2rem;
+  transition: right 0.3s ease;
+
+  &__links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &.open {
+    right: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+
+    &__links {
+      &-list {
+        gap: 1rem;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 1000px) {
+  .navbar {
+    &__button--generative-ai {
+      padding: 12px 15px 16px 40px;
+    }
+
+    &__logo {
+      img {
+        height: 40px;
+      }
+    }
+
+    &__links {
+      &-list {
+        display: none;
+      }
+    }
+
+    &__menu-toggle {
+      display: flex;
+    }
+  }
+}

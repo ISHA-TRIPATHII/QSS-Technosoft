@@ -1,0 +1,81 @@
+.stats {
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* How Far the object is from user during the 3D Effect,lower value will give more enhanced 3D Effect */
+}
+
+/* This container is needed to position the front and back side */
+.stat {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /* child element will preserve it's parent 3d position i.e. Mirror Effect Error will be avoided*/
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.stats-card:hover .stat {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+
+.front {
+  background-color: #8080803f;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-red;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.stats .count {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.stats .feat {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats-card {
+    width: 100%;
+  }
+}

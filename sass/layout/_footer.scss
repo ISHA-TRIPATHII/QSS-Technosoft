@@ -1,0 +1,175 @@
+footer {
+  color: #fff;
+  width: 100%;
+  background-color: #181818;
+}
+
+.footer-container {
+  padding: 40px 20px;
+  background-color: #181818;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.footer-section h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #f1f1f1;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-section ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.footer-section ul li a:hover::after {
+  width: 100%;
+}
+
+/* Logo Section Styles */
+.logo-section img {
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.logo-section p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  filter: grayscale(100%);
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s;
+  
+}
+
+.social-icons a:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+/* Technologies Section Styles */
+.tech-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-buttons button {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.small-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  background-color: $color-black;
+  font-size: 11px;
+}
+
+.ssl-image {
+  max-width: 120px;
+}
+
+.copy-text {
+  text-align: center;
+}
+
+.company-info {
+  text-align: right;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .tech-buttons {
+    justify-content: center;
+  }
+
+  .small-footer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    font-size: 14px;
+  }
+
+  .copy-text {
+    text-align: left;
+  }
+
+  .company-info {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-section {
+    flex: 1 1 140px;
+  }
+
+  .copy-text {
+    left: 100px;
+  }
+}

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --red: #ff0000;
+  --white: #ffffff;
+  --black: #000000;
+  --dark-gray: #1a1a1a;
+}
+
+html {
+  font-size: 100%;
+  /* 1rem = 16px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+.msg-icon {
+  background: $color-red;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: $color-white;
+  z-index: 100;
+}
+
+.required::after {
+  content: "*";
+  color: red;
+  margin-left: 0.25rem;
+  font-size: 1.2rem; /* Adjust size as needed */
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="195" height="58" viewBox="0 0 195 58">
+  <g id="Group_874" data-name="Group 874" transform="translate(-810 -10575)">
+    <circle id="Ellipse_52" data-name="Ellipse 52" cx="29" cy="29" r="29" transform="translate(810 10575)" fill="#53c410"/>
+    <path id="Icon_ionic-ios-lock" data-name="Icon ionic-ios-lock" d="M26.438,13.5H24.75V10.216a6.75,6.75,0,1,0-13.5-.091V13.5H9.563A2.821,2.821,0,0,0,6.75,16.313v13.5a2.821,2.821,0,0,0,2.813,2.813H26.438a2.821,2.821,0,0,0,2.813-2.812v-13.5A2.821,2.821,0,0,0,26.438,13.5Zm-7.453,8.775v4.837a1.008,1.008,0,0,1-.935,1.013.986.986,0,0,1-1.034-.984V22.275a2.25,2.25,0,1,1,1.969,0Zm3.8-8.775H13.219V10.125a4.781,4.781,0,0,1,9.563,0Z" transform="translate(821.25 10585.626)" fill="#fff"/>
+    <rect id="Rectangle_799" data-name="Rectangle 799" width="146" height="33" transform="translate(859 10588)" fill="#53c410"/>
+    <text id="SSL_Secured" data-name="SSL Secured" transform="translate(990 10612)" fill="#fff" font-size="21" font-family="ProximaNovaA-Regular, Proxima Nova Alt"><tspan x="-117.348" y="0">SSL Secured</tspan></text>
+  </g>
+</svg>

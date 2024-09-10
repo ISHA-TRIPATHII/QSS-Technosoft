@@ -1,0 +1,63 @@
+.header-overlay {
+  position: absolute;
+  padding: 2rem;
+  top: 70px;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  background-color: $color-nav-bg;
+  color: $color-white;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.header-overlay .row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.header-overlay .col-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+
+.header-overlay .item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.header-overlay .item:hover{
+  cursor: pointer;
+  color: $color-red;
+}
+
+.header-overlay .tech {
+  width: 30px;
+}
+
+.header-overlay .tech-heading {
+  font-weight: 400;
+}
+
+.header-overlay .tech-desc {
+  font-size: 12px;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 1000px) {
+  .header-overlay .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,145 @@
+.contact {
+  background-color: $color-white;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .contact-form {
+  background-color: #fffffffa;
+  box-shadow: 0px 6px 10px 0px #00000026;
+  margin-top: -210px;
+  margin-bottom: 0.5rem;
+  padding: 3rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact .contact-form h3 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.contact a {
+  color: rgb(128, 0, 0);
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.contact .contact-form span {
+  color: $color-red;
+}
+
+.contact-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.contact .form label {
+  margin-bottom: 0.5rem;
+  display: block;
+  text-align: left;
+}
+
+.contact .form input,
+.contact .form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  position: relative;
+  outline: none;
+}
+
+.contact .form input:focus,
+.contact .form textarea:focus {
+  border-color: $color-red;
+}
+
+.contact .form-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.contact .form input + i {
+  position: absolute;
+  right: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.contact .form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Add margin for the submit button */
+.contact .contact-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: $color-red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 20%;
+}
+
+.contact .field-group {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact .contact-form {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .contact .field-group {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact .form {
+    width: 100%;
+  }
+
+  .contact .contact-form {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .contact .contact-container {
+    display: none;
+  }
+
+  .contact .contact-btn {
+  
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  
+}

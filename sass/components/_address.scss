@@ -1,0 +1,76 @@
+.address {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  text-align: left;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 10px;
+  color: $color-black;
+  margin-top: 4rem;
+}
+
+.address .content h2,
+.collaborate {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.address .content span {
+  color: $color-red;
+}
+
+.address .content .elevate {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.address .country {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.pin-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 3rem;
+}
+
+.pin-icon {
+  width: 50px;
+  cursor: pointer;
+}
+
+.address-details {
+  list-style: none;
+  padding: 0;
+  display: none;
+  /* Hide by default */
+  text-align: left;
+}
+
+.address-details li {
+  margin: 10px 0;
+}
+
+#india-address.active,
+#usa-address.active {
+  display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .address {
+   
+    padding: 2rem;
+  }
+  
+}
